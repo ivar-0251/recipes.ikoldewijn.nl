@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Ivar Koldewijn </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-user icon'></i>
+        <div class="logo_name">Ikoldewijn</div>
+        <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="ikoldewijn.nl">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li> 
+      <li>
+        <a href="recipes.ikoldewijn.nl" class="home-button">
+          <i class='bx bx-bowl-hot'></i>
+          <span class="links_name">Recipes</span>
+        </a>
+         <span class="tooltip">Recipes</span>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/_ivar.koldewijn_/">
+          <i class='bx bxl-instagram'></i>
+          <span class="links_name">Instagram</span>
+        </a>
+         <span class="tooltip">_ivar.koldewijn_</span>
+      </li>
+     <li class="profile">
+         <div class="profile-details">
+          <img src="profile.png" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Ivar Koldewijn</div>
+             <div class="job">4 Vwo Leerling</div>
+           </div>
+         </div>
+         <i class='bx bx-info-circle' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">Home</div>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>
