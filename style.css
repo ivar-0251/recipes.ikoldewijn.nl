@@ -234,6 +234,7 @@
   background: none;
 }
 .home-section{
+  display: flex;
   position: relative;
   background: #E4E9F7;
   min-height: 100vh;
@@ -242,18 +243,66 @@
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .sidebar.open ~ .home-section{
   left: 250px;
   width: calc(100% - 250px);
 }
-.home-section .text{
-  display: inline-block;
-  color: #11101d;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px
+
+.card {
+  background: white;
+  width: 270px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 20px;
 }
+
+.card-image {
+  height: 170px;
+  margin-bottom: 8px;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-1 {
+  background-image: url('https://www.francescakookt.nl/wp-content/uploads/2022/05/mijn-versie-van-spaghetti-bolognese-1.jpg');
+}
+
+.card-2 {
+  background-image: url('https://kokenenbakkendoejezo.nl/wp-content/uploads/2021/12/Kip-ketjap-met-rijst.jpg');
+}
+
+.card-3 {
+  background-image: url('https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg');
+}
+
+.card h2,
+.card p {
+  padding-left: 15px;
+}
+.card p {
+  padding-bottom: 15px;
+}
+
+.card a {
+  background-color: black;
+  transition: 0.5s;
+  color: white;
+  padding: 15px 20px;
+  margin-bottom: 0px;
+  margin-top: 91px;
+  display: block;
+  text-align: center;
+  border-radius: 0px 0px 20px 20px;
+  text-decoration: none;
+}
+.card a:hover {
+  background-color: #52525a;
+  transition: 0.5s;
+}
+
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;
